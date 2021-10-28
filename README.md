@@ -35,7 +35,7 @@ The script responsible for data load in all scripts in is dataRawWav.py. Line 24
 This would need to be adapted to the users save location/
 
 
-This folder contains several main scripts with names beginning with m18model. Each correspond to different hyperparameter scripts, all beginning with hp, which are loaded in inside their respective main script.
+This folder contains several main scripts with names beginning with m18_run. Each correspond to different hyperparameter scripts, all beginning with hp, which are loaded in inside their respective main script.
 Similarlyl, there are several results csv files in the results directory, named by the variable being tested.
 Each main script is responsible for different experiments, which are obvious from their names.
 For instance, m18_run_batches.py pulls its hyperparameters from hpBatch.py and runs through multiple train and test times. All hyperparameters except batch size remain
@@ -46,3 +46,5 @@ The generic code to run is `CUDA_VISIBLE_DEVICES=0 python3 m18_run.py 18`
 The 18 argument is required as we initially wrote in the possibilty to have a mix of deterministic and probabilistic layers.
 This argument was the number of the latter in the model.
 `m18_run.py` above could be any of the following: m18_run_batches.py, m18_run_klDivSamples.py, m18_run_mc.py, m18_run_post.py, m18_run_prisHps.py, m18_run_pris.py, m18_run.py
+
+These scripts generate results, and the m18_run.py script saves down the entire best model. These are used to generate graphs using the notebooks in the folder: notebooksGeneratingGraphs
