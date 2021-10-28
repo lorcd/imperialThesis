@@ -1,7 +1,8 @@
 # imperialThesis
 This is the code to go along with the thesis titled "Uncertainty and Bayesian Neural Networks in Environmental Sound Classification" by author, Lorcan Donnellan.
 
-##Data load
+## Data load
+
 The models take the Urban Sounds 8K dataset as input. This was not included in this repository for size reasons. It can be downloaded from: 
 [Urban Sounds 8K](https://urbansounddataset.weebly.com/urbansound8k.html "UrbanSounds8K")
 
@@ -13,14 +14,14 @@ Line 68 in makeTfRecordsRawWav.py is where we define the audio directory. This s
 In our setup we copied makeTfRecordsRawWav.py directly into the unzipped UrbanSounds8K folder, and thus simply had what is seen in the script.
 This code may take a while to run.
 
-##Package Installation
+## Package Installation
 It is always recommended to enter a virtual environment before installing tensorflow modules. Once this is done, cd into the package folder in this repo and run:
 
 `pip3 install -r requirements.txt`
 
 This should install the necessary packages in the correct versions, which are all saved in requirements.txt
 
-##Running the deterministic model: M18
+## Running the deterministic model: M18
 Go to the deterministic directory: `cd code/m18/deterministic`
 Run: `CUDA_VISIBLE_DEVICES=0 python3 m18model.py`
 
@@ -28,7 +29,7 @@ The script responsible for data load in is dataRawWav.py. Line 32 in this script
 This will need to be adapted to where the user saved the tfrecords.
 Test results are outputted in the results folder.
 
-##Running the deterministic model: M18-P
+## Running the deterministic model: M18-P
 Go to the probabilistic directory: `cd code/m18/probabilistic`.
 The script responsible for data load in all scripts in is dataRawWav.py. Line 24 in this script is where we define the location of the tfrecords. 
 This would need to be adapted to the users save location/
