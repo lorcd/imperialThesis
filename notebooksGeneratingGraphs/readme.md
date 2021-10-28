@@ -1,1 +1,1 @@
-This folder contains notebooks used to generate all graphs found in the thesis.
+This folder contains notebooks used to generate all graphs found in the thesis. It requires the model, saved down by probabilistic/m18_run.py, to be loaded into some notebooks. Some require results csvs found in results folder.
