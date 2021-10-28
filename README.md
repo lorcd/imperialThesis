@@ -1,4 +1,4 @@
-# imperialThesis
+# How to use scripts
 This is the code to go along with the thesis titled "Uncertainty and Bayesian Neural Networks in Environmental Sound Classification" by author, Lorcan Donnellan.
 
 ## Data load
